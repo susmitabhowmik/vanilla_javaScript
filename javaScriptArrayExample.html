@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Fruits</h1>
+
+  <div class="fruits"></div>
+
+  <script type="text/javascript">
+    var fruits = [
+  {id: 1, name:"apple", color: "red", price: 2},
+  {id: 2, name:"orange", color: "orange", price: 1},
+  {id: 3, name:"mango", color: "red", price: 4},
+];
+
+console.log(fruits);
+var fruitsHTML = "";
+
+fruits.forEach(function(fruit) {
+  fruitsHTML += "<h2> Name: " + fruit.name + "</h2>" + "<p> Color: " + fruit.color + "</p>" + "<p> Price: " + fruit.price + "</p>";
+});
+      
+var fruitsDiv = document.querySelector('.fruits');
+fruitsDiv.innerHTML = fruitsHTML;
+   
+console.log(fruitsHTML);
+  </script>
+</body>
+</html>
